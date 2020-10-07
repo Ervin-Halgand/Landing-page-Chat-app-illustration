@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: hsl(270, 20%, 96%);
+    overflow-x: hidden;
+}
+
+.left__banner {
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: -150px;
+    height: 90vh;
+    width: 550px;
+    background: linear-gradient(200deg, hsl(293, 100%, 63%), 30%, hsl(264, 100%, 61%));
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transition: width 700ms;
+    animation: scaleLeftBanner 2s forwards;
+}
+
+.right__banner {
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    right: -220px;
+    height: 80vh;
+    width: 500px;
+    background-color: #f1edf2;
+    border-top-left-radius: 45%;
+    border-top-right-radius: 50%;
+    animation: scaleRightBanner 2s forwards;
+}
+.page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-left: 330px;
+    position: relative;
+    z-index: 10;
+    transition: margin 700ms;
+}
+
+.presentation {
+    padding-left: 120px;
+    width: 55%;
+    animation: scalePresentation 0.5s 3s forwards;
+    opacity: 0;
+}
+
+.presentation .title {
+    color: hsl(271, 36%, 24%);
+    margin-bottom: 30px;
+    font-size: 44px;
+    font-weight: 500;    
+}
+
+.presentation .text {
+    line-height: 1.70em;
+    color: hsl(270, 7%, 64%);
+}
+
+.iphone {
+    width: 275px;
+    border: 0.5em solid hsl(0, 0%, 100%);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 100px -20px gray;
+    opacity: 0;
+    animation: scaleIphone 1s 2s forwards;
+}
+
+.header {
+    background: linear-gradient(to right,hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+}
+
+.white_round {
+    position: relative;
+    left: 25%;
+    width: 50%;
+    height: 25px;
+    background-color: hsl(0, 0%, 100%);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.navigation {
+    color: hsl(0, 0%, 100%);
+    align-items: center;
+    display: flex;
+    padding: 15px 10px;
+}
+
+.navigation .back {
+    font-weight: 700;
+    margin-right: 10px;
+    transform: scaleX(0.6);
+}
+
+.navigation > img {
+    margin-right: 10px;
+    height: 25px;
+    border: 1.25px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+
+.navigation .menu  {
+    writing-mode: vertical-rl;
+    margin-left: auto;
+}
+
+.user__name {
+    font-weight: 500;
+    font-size: 12px;
+}
+.user__statut {
+    font-size: 9px;
+    color: hsl(276, 100%, 81%);
+}
+
+.chat {
+    background-color: hsl(270, 20%, 96%);
+    padding: 10px 10px;
+}
+
+.widget__text__receive {
+    margin-bottom: 5px ;
+    border-radius: 15px;
+    border-bottom-left-radius: 5px;
+    padding: 10px 10px;
+    color: hsl(276, 55%, 52%);
+    background-color: #EDE5F4;
+    font-size: 9px;
+    max-width: 60%;
+}
+
+.widget__img__send {
+    text-align: end;
+    margin-left: auto;
+}
+
+.widget__img__send  img{
+    margin-left: 6px;
+    display: inline-block;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.widget__text__send {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    margin-left: auto;
+    margin-bottom: 5px;
+    max-width: 60%;
+}
+.widget__text__send > .content {
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px;
+    border-radius: 15px;
+    border-bottom-right-radius: 5px;
+    margin-left: auto;
+    font-size: 9px;
+    display: inline-block;
+}
+
+.vocal {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right,hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    max-width: 75%;
+    margin-bottom: 5px ;
+    border-radius: 10px;
+    border-bottom-left-radius: 5px;
+    padding: 10px 10px;
+    color: hsl(0, 0%, 100%);
+}
+
+.circle {
+    margin-right: 15px;
+    opacity: 0.5;
+    border-radius: 50%;
+    border: 2px solid hsl(0, 0%, 100%);
+    width: 15px;
+    height: 15px;
+}
+
+.vocal .time {
+    font-size: 9px;
+}
+
+.vocal .price {
+    margin-left: auto;
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.input {
+    margin-top: 15px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.input > input {
+    padding-left: 5px;
+    flex-grow: 1;
+    border: none;
+    font-size: 9px;
+    height: 100%;
+    outline: none;
+}
+.input > input::placeholder {
+    padding-left: 30px;
+    color: hsl(206, 6%, 79%);
+}
+
+.input > button {
+    outline: none;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(271, 36%, 24%);
+    border: none;
+    margin-left: auto;
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;   
+}
+
+@media only screen and (max-width: 950px) {
+    
+    .page {
+        margin-left: 100px;
+    }
+    .left__banner {
+        width: 390px;
+        animation: scaleLeftBannerMedium 2s forwards;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+      .page {
+          flex-direction: column;
+          margin-left: 0;
+          margin-top: 15%;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+      }
+      .left__banner {
+          height: 70vh;
+          width: 340px;
+          animation: scaleLeftBannerSmall 2s forwards;
+      }
+      .right__banner {
+          width: 0px;
+      }
+      .presentation {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .presentation .title {
+          font-size: 40px;
+          margin-top: 40px;
+    }
+    .presentation .text {
+        padding: 0 30px;
+    }
+  }
+
+  @keyframes scaleLeftBanner {
+    0%   {width: 0px; opacity: 1;}
+    100%  {width: 550px;opacity: 1;}
+  }
+
+  @keyframes scaleLeftBannerMedium {
+    0%   {width: 0px; opacity: 1;}
+    100%  {width: 390px;opacity: 1;}
+  }
+
+  @keyframes scaleLeftBannerSmall {
+    0%   {width: 0px; opacity: 1;}
+    100%  {width: 340px;opacity: 1;}
+  }
+
+  @keyframes scaleRightBanner {
+    0%   {width: 0px; opacity: 1;}
+    100%  {width: 500px; opacity: 0.8;}
+  }
+
+  @keyframes scaleIphone {
+    0%   {transform: scaleY(0); opacity: 1;}
+    100%  {transform: scaleY(1); opacity: 1;}
+  }
+
+  @keyframes scalePresentation {
+    0%   {transform: scaleY(0); opacity: 1;}
+    75%   {transform: scaleY(1.5)}
+    100%  {transform: scaleY(1); opacity: 1;}
+  }
